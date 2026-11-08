@@ -1,0 +1,60 @@
+# 最終回直後の人間関係（有向。from が to をどう思っているか）
+#
+# trust: 信頼（0〜1） / hostility: 敵意（0〜1） / debt: from が to に負っている借り（0〜1）
+# 値はすべて仮置き（ドラマの描写からの推定）。根拠を note に書く。
+
+edges:
+  # 半沢と大和田
+  - {from: hanzawa, to: owada, hostility: 0.95, note: 父の仇。役員会議で土下座させた}
+  - {from: owada, to: hanzawa, hostility: 0.9, note: 役員会議で土下座させられた}
+  # 同期3人
+  - {from: hanzawa, to: tomari, trust: 0.9}
+  - {from: tomari, to: hanzawa, trust: 0.9}
+  - {from: hanzawa, to: kondo, trust: 0.8, note: 報告書の件は不問とした}
+  - {from: kondo, to: hanzawa, trust: 0.8, debt: 0.5, note: 報告書を渡せなかった負い目}
+  - {from: tomari, to: kondo, trust: 0.8}
+  - {from: kondo, to: tomari, trust: 0.8}
+  # 上司・頭取
+  - {from: hanzawa, to: naito, trust: 0.7}
+  - {from: naito, to: hanzawa, trust: 0.8}
+  - {from: nakanowatari, to: hanzawa, trust: 0.6, note: 超一流のバンカーと評価}
+  - {from: hanzawa, to: nakanowatari, trust: 0.4, note: 制止を振り切った直後に出向を命じられた}
+  - {from: nakanowatari, to: owada, trust: 0.4, note: 超一流のバンカーと評価し、降格で留めた}
+  - {from: owada, to: nakanowatari, hostility: 0.3, debt: 0.8, note: かつては追い落としを狙った。処分の軽さで借りができた}
+  - {from: nakanowatari, to: takagi, trust: 0.6}
+  - {from: takagi, to: nakanowatari, trust: 0.8, note: 中野渡派を自認}
+  - {from: naito, to: owada, hostility: 0.3}
+  # 大和田派の崩壊
+  - {from: owada, to: kishikawa, hostility: 0.7, note: 役員会議で裏切られた}
+  - {from: kishikawa, to: owada, hostility: 0.8, note: 独断だと責任を押し付けられた}
+  - {from: owada, to: fukuyama, trust: 0.2, note: 模擬検査での敗北で見限った}
+  - {from: fukuyama, to: owada, trust: 0.4}
+  - {from: owada, to: asano, trust: 0.1, note: 切り捨てた}
+  - {from: asano, to: owada, hostility: 0.4}
+  - {from: kaise, to: owada, hostility: 0.5, note: 「君が勝手にやった事だろう」と切り捨てられた}
+  - {from: takagi, to: owada, hostility: 0.5, note: 旧S出身の取締役を下に見ている}
+  - {from: owada, to: takagi, hostility: 0.5}
+  # 半沢に敗れた人物
+  - {from: asano, to: hanzawa, hostility: 0.8, note: 土下座させられ出向}
+  - {from: hanzawa, to: asano, hostility: 0.6}
+  - {from: ogiso, to: hanzawa, hostility: 0.7}
+  - {from: ogiso, to: asano, trust: 0.6, note: 人事部時代の元上司}
+  - {from: asano, to: ogiso, trust: 0.4}
+  - {from: ejima, to: hanzawa, hostility: 0.5}
+  - {from: ejima, to: asano, trust: 0.6, note: 浅野の側近}
+  - {from: fukuyama, to: hanzawa, hostility: 0.6}
+  - {from: hanzawa, to: fukuyama, hostility: 0.4}
+  - {from: kaise, to: hanzawa, hostility: 0.4}
+  - {from: furusato, to: hanzawa, hostility: 0.4}
+  - {from: kishikawa, to: hanzawa, hostility: 0.5, note: 脅されて証言させられた}
+  # 近藤をいびった人物
+  - {from: kondo, to: ogiso, hostility: 0.7, note: 休職に追い込まれた}
+  - {from: kondo, to: furusato, hostility: 0.5}
+  - {from: furusato, to: kondo, hostility: 0.3}
+  - {from: kondo, to: owada, hostility: 0.3, debt: 0.3, note: 復帰の取引をした相手}
+  - {from: tomari, to: owada, hostility: 0.5}
+  # 黒崎
+  - {from: kurosaki, to: hanzawa, hostility: 0.9, note: 2度敗れた}
+  - {from: hanzawa, to: kurosaki, hostility: 0.6}
+  - {from: kurosaki, to: kishikawa, trust: 0.5, note: 婚約者の父。大和田を裏切るよう吹き込んだ}
+  - {from: kishikawa, to: kurosaki, trust: 0.5}

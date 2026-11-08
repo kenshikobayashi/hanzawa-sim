@@ -1,0 +1,241 @@
+# 2013年版「半沢直樹」最終回（第10話）直後の人物の初期状態
+#
+# 出典: Wikipedia「半沢直樹」登場人物節（2026-11-08 に取得した wikitext）。
+#       半沢の出向先での役職の換算は J-CAST ニュース 2013-09-24 の解説による。
+#
+# 値の種類:
+#   - 事実（出典あり）: faction, rank, track, title, birth（birth_source: wikipedia / entry_year）
+#   - 仮置き（著者の推定）: birth（birth_source: actor_proxy＝当時の演者の生年で代用）, ability, traits
+#     traits は LLM からの方策抽出（Phase 3）までの暫定の行動ルールと、人事・処分の判断の癖に使う。
+#     ability は世界モデルが業績を計算するときに使う（ドラマ内の評価をもとに推定）。
+#
+# rank: 銀行 1〜10（10=頭取）、金融庁 1〜6（2=主任検査官）。PLAN.md 3.2 節を参照。
+# track: HQ=本部, BRANCH=支店, SECONDED=出向, EXTERNAL=外部組織
+# faction: S=旧産業中央銀行, T=旧東京第一銀行, EXT=銀行外
+#
+# traits（0〜1。info_skill のみ倍率）:
+#   ambition 出世欲 / aggression 攻撃性 / integrity 誠実さ / loyalty 味方への忠誠 / grudge 恨みの持続
+#   info_skill 情報収集の力 / faction_bias 人事での派閥重視 / cronyism 人事での縁故重視
+#   org_protect 処分での組織防衛（有力者への処分を軽くする傾向）
+
+start_time: 2013.75   # 2013年10月
+
+persons:
+  - id: hanzawa
+    name: 半沢直樹
+    faction: S
+    birth: 1970.93
+    birth_source: wikipedia      # 1970年12月8日生
+    org: bank
+    rank: 3
+    track: SECONDED
+    title: 東京セントラル証券 営業企画部長（出向）
+    note: 出向先の部長職は銀行本体の次長・副部長に相当するとみなしランク3（2020年版で本部次長として復帰する点とも整合）
+    tier: A
+    ability: 0.95
+    traits: {ambition: 0.5, aggression: 0.9, integrity: 0.8, loyalty: 0.85, grudge: 0.95, info_skill: 1.0,
+             faction_bias: 0.1, cronyism: 0.2, org_protect: 0.1}
+
+  - id: owada
+    name: 大和田暁
+    faction: S
+    birth: 1957.62
+    birth_source: wikipedia      # 1957年8月12日生
+    org: bank
+    rank: 6
+    track: HQ
+    title: 取締役（常務から降格）
+    rank_since: 2013.75          # 最終回で降格したばかり
+    note: 歴代最速・最年少で常務に就任した旧S派の筆頭。小説版では旧T出身
+    tier: A
+    ability: 0.9
+    traits: {ambition: 0.95, aggression: 0.7, integrity: 0.2, loyalty: 0.3, grudge: 0.8, info_skill: 1.2,
+             faction_bias: 0.9, cronyism: 0.8, org_protect: 0.6}
+
+  - id: nakanowatari
+    name: 中野渡謙
+    faction: T
+    birth: 1950.5
+    birth_source: entry_year     # 1973年度入行から推定
+    org: bank
+    rank: 10
+    track: HQ
+    title: 頭取
+    tier: A
+    ability: 0.85
+    traits: {ambition: 0.4, aggression: 0.3, integrity: 0.7, loyalty: 0.6, grudge: 0.3, info_skill: 1.0,
+             faction_bias: 0.2, cronyism: 0.3, org_protect: 0.8}
+
+  - id: tomari
+    name: 渡真利忍
+    faction: S
+    birth: 1970.5
+    birth_source: entry_year     # 1992年入行（半沢・近藤と同期）
+    org: bank
+    rank: 2
+    track: HQ
+    title: 融資部審査グループ 調査役
+    tier: A
+    ability: 0.8
+    traits: {ambition: 0.5, aggression: 0.4, integrity: 0.7, loyalty: 0.9, grudge: 0.5, info_skill: 1.8,
+             faction_bias: 0.3, cronyism: 0.4, org_protect: 0.3}
+
+  - id: kondo
+    name: 近藤直弼
+    faction: S
+    birth: 1970.5
+    birth_source: entry_year     # 1992年入行（半沢・渡真利と同期）
+    org: bank
+    rank: 2
+    track: HQ
+    title: 広報部 調査役
+    note: 大和田の申し出に応じて迂回融資の報告書を渡さず、タミヤ電機への出向から復帰
+    tier: A
+    ability: 0.7
+    traits: {ambition: 0.3, aggression: 0.3, integrity: 0.6, loyalty: 0.6, grudge: 0.4, info_skill: 1.0,
+             faction_bias: 0.3, cronyism: 0.4, org_protect: 0.4}
+
+  - id: naito
+    name: 内藤寛
+    faction: S
+    birth: 1959.0
+    birth_source: actor_proxy    # 吉田鋼太郎
+    org: bank
+    rank: 4
+    track: HQ
+    title: 営業第二部長
+    tier: A
+    ability: 0.75
+    traits: {ambition: 0.4, aggression: 0.3, integrity: 0.75, loyalty: 0.7, grudge: 0.3, info_skill: 1.0,
+             faction_bias: 0.3, cronyism: 0.3, org_protect: 0.4}
+
+  - id: kurosaki
+    name: 黒崎駿一
+    faction: EXT
+    birth: 1972.0
+    birth_source: actor_proxy    # 片岡愛之助
+    org: fsa
+    rank: 2
+    track: EXTERNAL
+    title: 金融庁検査局 主任検査官
+    note: 旧大蔵省銀行局出身。半沢に2度敗れた（大阪国税局時代と金融庁検査）
+    tier: A
+    ability: 0.85
+    traits: {ambition: 0.8, aggression: 0.85, integrity: 0.55, loyalty: 0.5, grudge: 0.9, info_skill: 1.4,
+             faction_bias: 0.0, cronyism: 0.3, org_protect: 0.3}
+
+  - id: takagi
+    name: 高木
+    faction: T
+    birth: 1953.0
+    birth_source: actor_proxy    # 三浦浩一（2013年版の高木は専務取締役・演 三浦浩一）
+    org: bank
+    rank: 8
+    track: HQ
+    title: 専務取締役
+    note: 中野渡派。旧S出身の取締役を下に見ている
+    tier: B
+    ability: 0.65
+    traits: {ambition: 0.7, aggression: 0.5, integrity: 0.5, loyalty: 0.8, grudge: 0.5, info_skill: 1.0,
+             faction_bias: 0.8, cronyism: 0.6, org_protect: 0.6}
+
+  - id: kishikawa
+    name: 岸川慎吾
+    faction: S
+    birth: 1953.0
+    birth_source: actor_proxy    # 森田順平
+    org: bank
+    rank: 6
+    track: SECONDED
+    title: 取締役・業務統括部長 → 出向
+    note: 役員会議で大和田の指示による不正を認め、後日出向。娘が黒崎と婚約
+    tier: B
+    ability: 0.55
+    traits: {ambition: 0.6, aggression: 0.4, integrity: 0.3, loyalty: 0.4, grudge: 0.7, info_skill: 1.0,
+             faction_bias: 0.7, cronyism: 0.7, org_protect: 0.5}
+
+  - id: fukuyama
+    name: 福山啓次郎
+    faction: S
+    birth: 1973.0
+    birth_source: actor_proxy    # 山田純大
+    org: bank
+    rank: 3
+    track: HQ
+    title: 融資部融資管理グループ 次長
+    note: 大和田派のホープだったが半沢に敗れて見限られた。金融庁に人脈（元MOF担）
+    tier: B
+    ability: 0.7
+    traits: {ambition: 0.8, aggression: 0.5, integrity: 0.35, loyalty: 0.4, grudge: 0.6, info_skill: 1.3,
+             faction_bias: 0.7, cronyism: 0.6, org_protect: 0.5}
+
+  - id: asano
+    name: 浅野匡
+    faction: S
+    birth: 1961.5
+    birth_source: wikipedia      # 1961年度生
+    org: bank
+    rank: 4
+    track: SECONDED
+    title: マニラの企業へ出向（元 大阪西支店長）
+    tier: B
+    ability: 0.55
+    traits: {ambition: 0.7, aggression: 0.6, integrity: 0.15, loyalty: 0.4, grudge: 0.8, info_skill: 1.0,
+             faction_bias: 0.7, cronyism: 0.8, org_protect: 0.5}
+
+  - id: ogiso
+    name: 小木曽忠生
+    faction: S
+    birth: 1964.0
+    birth_source: actor_proxy    # 緋田康人
+    org: bank
+    rank: 3
+    track: SECONDED
+    title: 出向（元 人事部管理グループ次長。資料抜き取りの処分）
+    tier: B
+    ability: 0.4
+    traits: {ambition: 0.6, aggression: 0.7, integrity: 0.2, loyalty: 0.6, grudge: 0.8, info_skill: 1.0,
+             faction_bias: 0.7, cronyism: 0.8, org_protect: 0.5}
+
+  - id: ejima
+    name: 江島浩
+    faction: S
+    birth: 1966.0
+    birth_source: actor_proxy    # 宮川一朗太
+    org: bank
+    rank: 3
+    track: BRANCH
+    title: 大阪西支店 副支店長
+    tier: B
+    ability: 0.4
+    traits: {ambition: 0.6, aggression: 0.4, integrity: 0.3, loyalty: 0.7, grudge: 0.5, info_skill: 1.0,
+             faction_bias: 0.6, cronyism: 0.7, org_protect: 0.5}
+
+  - id: kaise
+    name: 貝瀬郁夫
+    faction: S
+    birth: 1961.0
+    birth_source: actor_proxy    # 川原和久
+    org: bank
+    rank: 4
+    track: BRANCH
+    title: 京橋支店長
+    note: 大和田派。伊勢島ホテルの損失報告を黙認し、のちに大和田に切り捨てられた
+    tier: B
+    ability: 0.5
+    traits: {ambition: 0.6, aggression: 0.4, integrity: 0.3, loyalty: 0.4, grudge: 0.6, info_skill: 1.0,
+             faction_bias: 0.7, cronyism: 0.7, org_protect: 0.5}
+
+  - id: furusato
+    name: 古里則夫
+    faction: S
+    birth: 1962.0
+    birth_source: actor_proxy    # 手塚とおる
+    org: bank
+    rank: 1
+    track: BRANCH
+    title: 京橋支店融資課 課長代理
+    tier: B
+    ability: 0.35
+    traits: {ambition: 0.4, aggression: 0.3, integrity: 0.3, loyalty: 0.5, grudge: 0.4, info_skill: 1.0,
+             faction_bias: 0.5, cronyism: 0.6, org_protect: 0.5}

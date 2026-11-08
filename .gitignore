@@ -1,0 +1,13 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 暫定ルール（LLMなし）での動作確認の結果。分析には使わない
+data/results/heuristic/

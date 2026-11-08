@@ -1,0 +1,30 @@
+基準 100,000 回 1467秒
+基準 10,000 回 121秒
+  S2公表_浅野の5000万円 129秒
+  S3公表_黒崎の婚約 168秒
+  S4公表_大和田と近藤の取引 116秒
+  S5公表_半沢の疎開資料 109秒
+  中野渡が直後に退任 86秒
+  大和田が直後に退職 118秒
+  半沢が告発しない 120秒
+  渡真利が半沢を支援しない 118秒
+基準 5,000 回 62秒
+  inspection_rate=0.125 59秒
+  inspection_rate=0.375 59秒
+  leak_rate=0.0025 60秒
+  leak_rate=0.0075 61秒
+  case_fail_rate=0.005 56秒
+  case_fail_rate=0.015 66秒
+  latent_scandal_rate=0.0075 62秒
+  latent_scandal_rate=0.0225 67秒
+  board_weight=0.2 60秒
+  board_weight=0.6 59秒
+  return_base=-2.5 59秒
+  return_base=-1.5 59秒
+  age_second_rate=0.125 60秒
+  age_second_rate=0.375 64秒
+  toudori_hazard=0.06 66秒
+  toudori_hazard=0.18 55秒
+  hr_tau=0.25 59秒
+  hr_tau=0.75 60秒
+exit 0
