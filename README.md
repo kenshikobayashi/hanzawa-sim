@@ -37,7 +37,7 @@
 
 | パス | 内容 |
 |---|---|
-| `data/world/` | 人物15人の初期状態、秘密（不正）10件、人間関係47本 |
+| `data/world/` | 人物15人の初期状態、秘密（不正）8件と、動機に関わる私的な事実2件、人間関係47本 |
 | `data/personas/personas.yaml` | 15人のペルソナ |
 | `src/hanzawa_sim/world/` | 世界モデル（人物・秘密・関係・パラメータ） |
 | `src/hanzawa_sim/sim/` | ゲームマスター（行動の解決、人事、処分、外生イベント）、乱数表、並列実行 |
@@ -49,6 +49,9 @@
 | `scripts/analyze.py` | 10万回のモンテカルロ、介入実験、感度分析 |
 | `scripts/full_llm_run.py` | 完全LLMラン（全員の行動を毎半期 LLM が決める1試行） |
 | `scripts/report.py` | 結果の表（Markdown） |
+| `scripts/figures.py` | 解説ページの図（明るい背景用と暗い背景用） |
+| `scripts/trajectories.py` | 人物ごとの状態の推移（毎年9月末）の集計 |
+| `scripts/backtest.py` | 2020年版との照合 |
 
 ## 再現手順
 
