@@ -172,6 +172,6 @@ LLM はすべて Claude Code のサブスクリプションの利用枠で呼び
 
 ## コードとデータ
 
-GitHub: （URL）
+GitHub: https://github.com/kenshikobayashi/hanzawa-sim
 
 LLM の全回答を保存しているため、方策の学習以降は LLM なしで再現できる。
