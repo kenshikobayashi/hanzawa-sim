@@ -2,7 +2,7 @@
 
 - 作成: 2026-11-08
 - 作業名: hanzawa-sim（仮）
-- 状態: Phase 0〜5 完了、Phase 6（公開）は下書きまで（2026-11-08）
+- 状態: Phase 0〜5 完了、GitHub 公開済み、note は下書き（2026-11-08）
 
 ## 進捗
 
@@ -14,7 +14,7 @@
 | 3 | 完了 | `scripts/elicit.py`。Sonnet・Haiku 各1,157回、計2,314回すべて成功（換算 9.37ドル、45分、6並列）。内訳: 行動カード 1,025枚、取引への応答 41枚、処分の判断 32枚、人事の好み 40枚、再現テスト 9場面、予測 15人、再回答 28枚、名前を伏せた版 12枚 |
 | 4 | 完了 | `agents/distill.py`・`scripts/fit_policies.py`（階層多項ロジット、5分割交差検証）。エンジンに組み込み（応答・処分・人事）。完全LLMラン1回（Sonnet 189回、換算 1.70ドル、2.3分）。誤差の評価は「方策モデルの評価」の項 |
 | 5 | 完了 | `scripts/analyze.py`。Sonnet の方策で基準シナリオ 10万回（24分）、介入実験 8条件×1万組、感度分析 9パラメータ×2水準×5千組。Haiku の方策で基準シナリオ 2万回。バックテスト、動機の分類。結果は `data/results/<方策>/report.md`、記事の下書きは `docs/note_draft.md` |
-| 6 | 下書きまで | README、note の下書き。GitHub への公開（リポジトリ用のメールアドレスの設定とコミット）は未実施 |
+| 6 | GitHub 公開済み・note は下書き | https://github.com/kenshikobayashi/hanzawa-sim （public、2026-11-08）。note の下書きは `docs/note_draft.md` |
 
 パイロットの結果（2026-11-08 12:48、`data/elicitation/pilot/`）:
 
